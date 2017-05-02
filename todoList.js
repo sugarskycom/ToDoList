@@ -59,6 +59,11 @@ var vm = new Vue({
                     return !item.isChecked;
                 });
             }
+        },
+        total(){
+           return this.todos.filter(function (item) {
+                return !item.isChecked;
+            }).length;
         }
     }
 });

@@ -30,7 +30,7 @@
         <li :class = "{active:state=='unfinish'}"><a href="#unfinish">还未完成</a></li>
     </ul>
     <ul class="list-group">
-        <li class="list-group-item" v-for="todo in cloneTodo" :class="{del:todo.isChecked}" @dbclick="changeTitle(todo)">
+        <li class="list-group-item" v-for="todo in cloneTodo" :class="{del:todo.isChecked}" @dblclick="changeTitle(todo)"><!--dbl双击事件-->
             <div v-show="currentTodo !=todo">
                 <input type="checkbox" v-model="todo.isChecked">
                 <span>{{todo.titles}}</span>
